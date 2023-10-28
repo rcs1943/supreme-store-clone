@@ -1,0 +1,44 @@
+<nav
+	class="flex flex-col gap-10 text-[13px] text-white justify-center items-center"
+>
+	<div class="flex gap-12 sm:w-[95%] max-w-2xl justify-between">
+		<ul class="grid grid-rows-2 grid-cols-2 sm:flex gap-x-24 gap-y-4 sm:gap-4">
+			<li class="cursor-pointer w-fit hover:bg-supreme-red">
+				<a href="/">home</a>
+			</li>
+			<div class="hidden sm:block relative group">
+				<li class="cursor-pointer w-fit hover:bg-supreme-red">
+					<a href="/previews/fallwinter2023">fall/winter 2023 preview</a>
+				</li>
+				<li
+					class="invisible absolute pt-1 whitespace-nowrap cursor-pointer w-fit group-hover:visible hover:visible"
+				>
+					<a href="/previews/springsummer2023" class="bg-clip-padding text-white hover:bg-supreme-red">spring/summer 2023 preview</a>
+				</li>
+			</div>
+			<li *ngIf="!inPreview" class="hidden sm:flex cursor-pointer w-fit hover:bg-supreme-red">
+				<a href="/lookbook">lookbook</a>
+			</li>
+			<li class="cursor-pointer w-fit hover:bg-supreme-red">
+				<a href="/">random</a>
+			</li>
+			<li class="cursor-pointer w-fit hover:bg-supreme-red">
+				<a href="/about">about</a>
+			</li>
+			<li class="cursor-pointer w-fit hover:bg-supreme-red">
+				<a href="/stores">stores</a>
+			</li>
+		</ul>
+		<ul *ngIf="inPreview" class="hidden sm:flex gap-4">
+			<li class="cursor-pointer w-fit hover:bg-supreme-red">
+				<a href="/previews/springsummer2023/all">view all</a>
+			</li>
+			<li
+				class="cursor-pointer text-supreme-red hover:bg-supreme-red hover:text-white"
+			>
+				<a href="/lookbook">*lookbook</a>
+			</li>
+		</ul>
+	</div>
+	<app-subfooter class="contents"/>
+</nav>

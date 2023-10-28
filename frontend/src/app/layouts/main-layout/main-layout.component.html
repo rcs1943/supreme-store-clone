@@ -1,0 +1,11 @@
+<body class="flex flex-col justify-between min-h-screen sm:min-h-[106vh] bg-black">
+	<header class="p-8 sm:pb-0">
+		<app-header />
+	</header>
+	<main>
+		<ng-content />
+	</main>
+	<footer class="pb-10 pt-6 sm:pt-0 sm:pb-2">
+		<app-footer [inPreview]="footerInPreview" />
+	</footer>
+</body>
