@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from 'src/app/shared/components/header/header.component';
 import { HomeNavMenuComponent } from './components/home-nav-menu/home-nav-menu.component';
@@ -6,6 +6,7 @@ import { HomeNavMenuComponent } from './components/home-nav-menu/home-nav-menu.c
 @Component({
   selector: 'app-home',
   standalone: true,
+	// changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule, HeaderComponent, HomeNavMenuComponent],
   templateUrl: './home.component.html',
 })

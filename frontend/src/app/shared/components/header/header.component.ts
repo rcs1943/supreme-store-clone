@@ -1,21 +1,27 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
 	selector: 'app-header',
 	standalone: true,
+	changeDetection: ChangeDetectionStrategy.OnPush,
 	imports: [CommonModule],
 	templateUrl: './header.component.html',
 })
 export class HeaderComponent implements OnInit {
 	currentDate: string = '';
 	currentTime: string = '';
+
+	constructor(private cd: ChangeDetectorRef) {}
 	ngOnInit(): void {
 		this.updateDate();
-		setInterval(() => this.updateDate(), 60000);
+		setInterval(() => {
+			this.updateDate();
+			this.cd.markForCheck();
+		}, 60000);
 	}
 
-	updateDate() {
+	updateDate(): void {
 		const date = new Date();
 		this.currentDate = date.toLocaleString("en-US", {
 			year: "numeric",

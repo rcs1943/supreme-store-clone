@@ -1,0 +1,37 @@
+[
+	{
+        "id": 1,
+		"title": "Supreme®/Schott® Leather Racer Jacket",
+		"description": "Cowhide leather with satin lining and full zip closure. Double welt zip pockets at lower front and chest with interior chest pockets. Debossed logo at chest pocket. Made exclusively for Supreme.",
+		"imageUrl": "https://cdn.sanity.io/images/ldn4d4qt/production-fw23/c6caffbd0983178eef26c8363881361ce0a2c559-2219x1800.jpg?w=1400&q=90&auto=format",
+		"dripPath": "schott-r-leather-racer-jacket"
+	},
+	{
+        "id": 2,
+		"title": "Supreme®/Schott® Leather Racer Jacket",
+		"description": "Cowhide leather with satin lining and full zip closure. Double welt zip pockets at lower front and chest with interior chest pockets. Debossed logo at chest pocket. Made exclusively for Supreme.",
+		"imageUrl": "https://cdn.sanity.io/images/ldn4d4qt/production-fw23/812b917bb7d6185deea084d4c7fc3f1a7aa837b3-2248x1800.jpg?w=1400&q=90&auto=format",
+		"dripPath": "schott-r-leather-racer-jacket-2"
+	},
+	{
+        "id": 3,
+		"title": "Shibori Denim Trucker Jacket",
+		"description": "All cotton 13 oz. denim. Button front closure with on seam hand pockets at lower front and button flap patch pockets at chest. Tab adjusters at cuffs and back hem with leather logo patch. Shibori dyed logo at back shoulders and sleeves.",
+		"imageUrl": "https://cdn.sanity.io/images/ldn4d4qt/production-fw23/8f516f5fe235083ab85d555c05978dd7984e4177-2097x1800.jpg?w=1400&q=90&auto=format",
+		"dripPath": "shibori-denim-trucker-jacket"
+	},
+	{
+        "id": 4,
+		"title": "Shibori Denim Trucker Jacket",
+		"description": "All cotton 13 oz. denim. Button front closure with on seam hand pockets at lower front and button flap patch pockets at chest. Tab adjusters at cuffs and back hem with leather logo patch. Shibori dyed logo at back shoulders and sleeves.",
+		"imageUrl": "https://cdn.sanity.io/images/ldn4d4qt/production-fw23/99796138a9598d9079bcc96f7aced2895fcb5fd1-2108x1800.jpg?w=1400&q=90&auto=format",
+		"dripPath": "shibori-denim-trucker-jacket-2"
+	},
+	{
+        "id": 5,
+		"title": "Shibori Loose Fit Jean",
+		"description": "All cotton 13 oz. denim with Shibori dyed logos.",
+		"imageUrl": "https://cdn.sanity.io/images/ldn4d4qt/production-fw23/b7c71cacded8a144d60db7a3089bc4eb04f0ebaf-891x1800.jpg?w=1400&q=90&auto=format",
+		"dripPath": "shibori-loose-fit-jean"
+	}
+]

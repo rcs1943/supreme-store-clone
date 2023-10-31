@@ -1,0 +1,23 @@
+<div class="flex justify-between gap-5 whitespace-nowrap">
+	<div class="flex text-white gap-2 text-sm">
+		<button
+			(click)="goPreviousDrip()"
+			[ngClass]="currentIndex > 0 ? 'block' : 'invisible'"
+		>
+			<-
+		</button>
+		<span> {{ currentIndex + 1 }} of {{ listLength }} </span>
+		<button
+			(click)="goNextDrip()"
+			[ngClass]="currentIndex < listLength - 1 ? 'block' : 'invisible'"
+		>
+			->
+		</button>
+	</div>
+	<button
+		(click)="goBack()"
+		class="hidden sm:block bg-white px-1 hover:bg-supreme-red hover:text-white"
+	>
+		back
+	</button>
+</div>
