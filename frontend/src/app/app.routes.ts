@@ -4,6 +4,7 @@ import { HomeComponent } from './views/home/home.component';
 import { GridPreviewComponent } from './views/previews/grid-preview/grid-preview.component';
 // import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { SingularItemComponent } from './views/previews/singular-item/singular-item.component';
+import { AllPreviewComponent } from './views/previews/all-preview/all-preview.component';
 
 export const routes: Routes = [
 	{
@@ -31,4 +32,8 @@ export const routes: Routes = [
 		path: 'previews/:season/:category/:dripPath',
 		component: SingularItemComponent,
 	},
+	{
+		path: 'previews/:season/:category',
+		component: AllPreviewComponent
+	}
 ];

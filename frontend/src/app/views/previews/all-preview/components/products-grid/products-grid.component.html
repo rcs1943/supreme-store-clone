@@ -1,0 +1,13 @@
+<div class="grid grid-cols-7 gap-[1px] bg-white max-h-[500px] overflow-y-auto pr-1">
+	<a
+		*ngFor="let product of products"
+		routerLink="../{{ product.category }}/{{ product.dripPath }}"
+		class="bg-white p-1 hover:outline hover:outline-1 hover:outline-supreme-red"
+		><img
+			[ngSrc]="product.imageUrl"
+			alt=""
+			width="100"
+			height="100"
+			class="w-[100px] h-[100px] bg-cover object-contain"
+	/></a>
+</div>

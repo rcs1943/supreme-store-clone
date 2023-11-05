@@ -14,6 +14,7 @@ export class ControlsComponent {
 	@Input() currentIndex: number = 0;
 	@Output() currentIndexChange = new EventEmitter<number>();
 	@Input() listLength: number = 0;
+	@Input() changeDripPath: () => void = () => {};
 
 	cd = inject(ChangeDetectorRef);
 	location = inject(Location);
@@ -24,15 +25,17 @@ export class ControlsComponent {
 		this.navigationService.goBack();
 	}
 
-	goPreviousDrip(): void {
+	goPreviousDrip = (): void => {
+		// console.log(this.currentIndex)
 		this.currentIndex--;
 		this.currentIndexChange.emit(this.currentIndex)
-		this.cd.markForCheck();
+		this.changeDripPath();
 	}
 
-	goNextDrip(): void {
+	goNextDrip = (): void => {
+		// console.log(this.currentIndex)
 		this.currentIndex++;
 		this.currentIndexChange.emit(this.currentIndex)
-		this.cd.markForCheck();
+		this.changeDripPath();
 	}
 }

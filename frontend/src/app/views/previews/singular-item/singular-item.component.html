@@ -8,7 +8,8 @@
 			[src]="products[currentIndex].imageUrl || 'assets/images/MAIN_LOGO.png'"
 			[alt]="products[currentIndex].title || 'Title de prueba'"
 			class="max-h-[420px] max-w-[550px] object-contain h-full w-full px-4 sm:px-0"
-		/>
+			(click)="test()"
+			/>
 		<div class="flex items-start gap-4 sm:gap-8 px-5">
 			<a routerLink="/" class="hidden sm:block"
 				><img src="assets/images/MAIN_LOGO.png" alt="SUPREME LOGO" class="sm:min-w-[110px] md:w-[160px]"
@@ -24,11 +25,12 @@
 			<app-controls
 				[(currentIndex)]="currentIndex"
 				[listLength]="products.length"
+				[changeDripPath]="changeDripPath"
 				class="pt-4"
 			/>
 		</div>
 	</article>
 	<ng-template #loading>
-		<h1 class="text-supreme-red">CARGANDO</h1>
+		<h1 class="text-supreme-red text-center">CARGANDO</h1>
 	</ng-template>
 </section>

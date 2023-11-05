@@ -7,6 +7,7 @@ export interface Product {
 }
 
 export interface ProductGrid {
+    id: number;
     category: string;
     dripPath: string;
     imageUrl: string;
