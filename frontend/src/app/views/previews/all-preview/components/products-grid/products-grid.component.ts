@@ -23,16 +23,23 @@ export class ProductsGridComponent implements OnInit {
 	cd = inject(ChangeDetectorRef);
 
 	products: ProductGrid[] = [];
+	isAll: boolean = true;
 
 	ngOnInit(): void {
 		this.route.paramMap.subscribe((params) => {
 			const category = params.get('category');
-			const url = `assets/data/products.${category}.json`;
+			const url = `assets/data/products.json`;
 
 			this.http.get<ProductGrid[]>(url).subscribe((data) => {
+				if (category !== 'all') {
+					this.products = data.filter((product) => product.category === category);
+					this.isAll = false;
+					this.cd.markForCheck();
+					return;
+				}
 				this.products = data;
+				this.isAll = true;
 				this.cd.markForCheck();
-				// Debo ver la forma de que sea un Observable nms y punto.
 			});
 		});
 	}
